@@ -1,0 +1,40 @@
+﻿
+<html>
+<head>
+<title>WEB LED Control</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+.auto-style3 {
+	background-color: #008000;
+}
+.auto-style6 {
+	border-style: solid;
+	border-color: #000000;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #FF9900;
+}
+</style>
+</head>
+<body>
+<center>
+<strong><br>LED CONTROL<br><br><br></strong>
+<table style="width: 50%">
+<tr>
+  <td class="auto-style6" style="height: 81; width: 30%"><strong>
+  <!-- led_control_act 함수를 호출해서 파라미터가 1이면 LED ON -->
+  <a href="led_control_act?led=1">LED ON</a></strong></td>
+  <td class="auto-style1" style="height: 81; width: 50">&nbsp;</td>
+  <td class="auto-style6" style="height: 81; width: 30%;"><strong>
+  <!-- led_control_act 함수를 호출해서 파라미터가 2이면 LED OFF -->
+  <a href="led_control_act?led=2">LED OFF</a>
+</strong></td>
+</tr>
+</table>
+<!-- 리턴된 ret 값에 의해 현재 LED 상태를 표시 -->
+<strong><br>LED is {{ ret }}</strong> 
+</center>
+</body>
+</html>

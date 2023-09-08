@@ -1,0 +1,55 @@
+import RPi.GPIO as gpio
+import threading
+import time
+
+led_red_pin     = 17
+led_green_pin   = 27
+led_blue_pin    = 23
+
+gpio.setmode(gpio.BCM)
+
+gpio.setup(led_red_pin, gpio.OUT)
+gpio.setup(led_green_pin, gpio.OUT)
+gpio.setup(led_blue_pin, gpio.OUT)
+
+gpio.output(led_red_pin, False)
+gpio.output(led_green_pin, False)
+gpio.output(led_blue_pin, False)
+
+flag_exit = False
+def t1_main():
+	while True:
+		gpio.output(led_green_pin, True)
+		time.sleep(1.3)	
+		gpio.output(led_green_pin, False)
+		time.sleep(1.3)
+		if flag_exit: break
+
+def t2_main():
+	while True:
+		gpio.output(led_blue_pin, True)
+		time.sleep(1.7)	
+		gpio.output(led_blue_pin, False)
+		time.sleep(1.7)
+		if flag_exit: break
+		
+t1 = threading.Thread(target=t1_main)
+t1.start()
+t2 = threading.Thread(target=t2_main)
+t2.start()
+
+try:
+	while True:
+		gpio.output(led_red_pin, True)
+		time.sleep(0.7)	
+		gpio.output(led_red_pin, False)
+		time.sleep(0.7)	
+		
+except KeyboardInterrupt:
+	pass
+	
+flag_exit = True
+t1.join()
+t2.join()	
+gpio.cleanup()
+

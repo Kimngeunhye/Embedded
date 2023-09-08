@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>GET method Test</title>
+</head>
+
+<body>
+<h2>ID:{{ id }}, PASSWORD:{{ password }}</h2>	<!-- 전달된 값을 받아 출력 -->
+<form method="get" action="/method_get_act">	<!-- submit 버튼을 눌렀을 때 get 방식으로 어떤 함수를 호출할지 결정 -->
+	<label id="Label1">id</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input name="id" type="text" />
+	<label id="Label1"><br />password </label>
+	<input name="password" type="text" /><br /><br />
+	<input name="Submit1" type="submit" value="submit" />
+</form>
+</body>
+</html>
+

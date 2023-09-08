@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/kimgrace/Desktop/ch04" added="2023-08-07T06:55:45.405436Z" modified="2023-08-07T06:55:45.405461Z" visited="2023-08-07T06:55:45.405443Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thonny" exec="&apos;Thonny %u&apos;" modified="2023-08-07T06:55:45.405450Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/kimgrace/Desktop/ch04.py" added="2023-08-09T04:24:55.962807Z" modified="2023-08-09T04:25:38.386120Z" visited="2023-08-09T04:24:55.962813Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>geany</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="geany" exec="&apos;geany %u&apos;" modified="2023-08-09T04:24:55.962825Z" count="1"/>
+          <bookmark:application name="Thonny" exec="&apos;Thonny %u&apos;" modified="2023-08-09T04:25:38.386107Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/tmp.zopujcFS2a" added="2023-08-09T05:09:44.016488Z" modified="2023-08-09T05:09:44.016516Z" visited="2023-08-09T05:09:44.016494Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>geany</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="geany" exec="&apos;geany %u&apos;" modified="2023-08-09T05:09:44.016506Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/tmp.VphMOCGEfX" added="2023-08-09T05:09:44.270251Z" modified="2023-08-09T05:09:44.270280Z" visited="2023-08-09T05:09:44.270258Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>geany</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="geany" exec="&apos;geany %u&apos;" modified="2023-08-09T05:09:44.270270Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/kimgrace/Desktop/4%20digit%207seg.py" added="2023-08-11T03:08:50.440469Z" modified="2023-08-11T03:08:50.440498Z" visited="2023-08-11T03:08:50.440476Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>geany</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="geany" exec="&apos;geany %u&apos;" modified="2023-08-11T03:08:50.440487Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/kimgrace/Desktop/Test" added="2023-08-11T04:21:25.416878Z" modified="2023-08-11T04:21:25.416945Z" visited="2023-08-11T04:21:25.416896Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thonny" exec="&apos;Thonny %u&apos;" modified="2023-08-11T04:21:25.416918Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

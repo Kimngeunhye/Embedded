@@ -1,0 +1,71 @@
+import RPi.GPIO as gpio
+import time
+
+def buttonPressed(channel):     
+	global cnt
+	cnt = cnt + 1
+	print(cnt)
+	if cnt == 4: 
+		cnt = 0
+	if cnt == 0:
+		gpio.output(led_red_pin, True)
+	elif cnt == 1:
+		gpio.output(led_green_pin, True)
+	elif cnt == 2:
+		gpio.output(led_blue_pin, True)
+	elif cnt == 3:
+		gpio.output(led_red_pin, False)
+		gpio.output(led_green_pin, False)
+		gpio.output(led_blue_pin, False)
+
+button_pin      = 22
+led_red_pin     = 17
+led_green_pin   = 27
+led_blue_pin    = 23
+servo_pin       = 18
+
+gpio.setmode(gpio.BCM)
+
+gpio.setup(button_pin, gpio.IN)
+gpio.add_event_detect(button_pin, gpio.RISING)
+gpio.add_event_callback(button_pin, buttonPressed)
+
+gpio.setup(led_red_pin, gpio.OUT)
+gpio.setup(led_green_pin, gpio.OUT)
+gpio.setup(led_blue_pin, gpio.OUT)
+gpio.setup(servo_pin, gpio.OUT)
+
+gpio.output(led_red_pin, False)
+gpio.output(led_green_pin, False)
+gpio.output(led_blue_pin, False)
+
+pwm_servo = gpio.PWM(servo_pin, 50)
+pwm_servo.start(3.0)
+
+cnt = 0
+
+try:
+	while True:
+		userInput = input("Servo Motor : ");
+		print(userInput)
+		if userInput == "q":
+			pwm_servo.ChangeDutyCycle(12)		
+			time.sleep(1.0)	
+			pwm_servo.ChangeDutyCycle(0.0)
+		elif userInput == "w":
+			pwm_servo.ChangeDutyCycle(7.75)		
+			time.sleep(1.0)	
+			pwm_servo.ChangeDutyCycle(0.0)
+		elif userInput == "e":
+			pwm_servo.ChangeDutyCycle(3)		
+			time.sleep(1.0)	
+			pwm_servo.ChangeDutyCycle(0.0)		
+		
+except KeyboardInterrupt:
+	pass
+	
+pwm_servo.stop()	
+gpio.cleanup()
+
+
+	
